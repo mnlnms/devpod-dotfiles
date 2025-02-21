@@ -1,0 +1,22 @@
+#!/bin/bash
+packages=(
+  fd
+  ripgrep
+  npm
+  lazygit
+  fzf
+  kubectl
+  fluxcd/tap/flux
+  k9s
+  kubectx
+  direnv
+  kubectl-cnpg
+)
+
+# Iterate over the array and install each package
+for package in "${packages[@]}"; do
+  echo "Installing $package..."
+  /home/linuxbrew/.linuxbrew/bin/brew install "$package"
+done
+
+echo "All packages have been installed."
